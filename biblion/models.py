@@ -42,6 +42,8 @@ class Post(models.Model):
     content_html = models.TextField(editable=False)
     
     tweet_text = models.CharField(max_length=140, editable=False)
+
+    enable_comments = models.BooleanField(default=True, blank=True)
     
     created = models.DateTimeField(default=datetime.now, editable=False) # when first revision was created
     updated = models.DateTimeField(null=True, blank=True, editable=False) # when last revision was create (even if not published)

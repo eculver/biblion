@@ -22,6 +22,7 @@ class PostAdmin(admin.ModelAdmin):
         "author",
         "teaser",
         "content",
+        "enable_comments",
         "publish",
     ]
     if can_tweet():
